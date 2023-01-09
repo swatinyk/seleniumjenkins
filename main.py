@@ -2,12 +2,17 @@ from time import sleep
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains, Keys
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
-driver=webdriver.Chrome(executable_path=r'/usr/local/bin/chromedriver')
+options = Options()
+options.binary_location = "/usr/bin/chromedriver"    #chrome binary location specified here
+options.add_argument("--start-maximized") #open Browser in maximized mode
+options.add_argument("--no-sandbox")
+driver=webdriver.Chrome(options=options,executable_path=r'/usr/bin/chromedriver')
 driver.maximize_window()
 # driver.get('https://www.makemytrip.com/')
 # sleep(5)
