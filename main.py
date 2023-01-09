@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
-driver=webdriver.Chrome()
+driver=webdriver.Chrome(executable_path=r'/usr/local/bin/chromedriver')
 driver.maximize_window()
 # driver.get('https://www.makemytrip.com/')
 # sleep(5)
