@@ -78,3 +78,4 @@ subtotal=driver.find_element(By.XPATH,"//div[@class='EEeV3']//div/span").text
 print(subtotal)
 dish=driver.find_element(By.XPATH,"//div[@class='_33KRy']").text
 print(dish)
+sleep(5)
