@@ -9,10 +9,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 options = Options()
-options.binary_location = "/usr/bin/chromedriver"    #chrome binary location specified here
+# options.binary_location = "/usr/local/bin/chromedriver"    #chrome binary location specified here
 options.add_argument("--start-maximized") #open Browser in maximized mode
 options.add_argument("--no-sandbox")
-driver=webdriver.Chrome(options=options,executable_path=r'/usr/bin/chromedriver')
+driver=webdriver.Chrome(options=options,executable_path=r'/usr/local/bin/chromedriver')
 driver.maximize_window()
 # driver.get('https://www.makemytrip.com/')
 # sleep(5)
