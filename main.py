@@ -7,14 +7,17 @@ from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
 
 options = Options()
 # options.binary_location = "/usr/local/bin/chromedriver"    #chrome binary location specified here
 options.add_argument("--start-maximized") #open Browser in maximized mode
 options.add_argument("--no-sandbox")
-options.add_argument("--headless")
+# options.add_argument("--headless")
 # driver=webdriver.Chrome(options=options,executable_path=r'/usr/local/bin/chromedriver')
-driver=webdriver.Chrome(options=options)
+driver = webdriver.Chrome(ChromeDriverManager().install(),options=options)
+
+# driver=webdriver.Chrome(options=options)
 driver.maximize_window()
 # driver.get('https://www.makemytrip.com/')
 # sleep(5)
