@@ -12,8 +12,9 @@ options = Options()
 # options.binary_location = "/usr/local/bin/chromedriver"    #chrome binary location specified here
 options.add_argument("--start-maximized") #open Browser in maximized mode
 options.add_argument("--no-sandbox")
-options.add_argument("--headless")
-driver=webdriver.Chrome(options=options,executable_path=r'/usr/local/bin/chromedriver')
+# options.add_argument("--headless")
+# driver=webdriver.Chrome(options=options,executable_path=r'/usr/local/bin/chromedriver')
+driver=webdriver.Chrome(options=options)
 driver.maximize_window()
 # driver.get('https://www.makemytrip.com/')
 # sleep(5)
