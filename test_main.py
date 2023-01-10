@@ -13,7 +13,7 @@ def test_login():
     options = Options()
     # options.binary_location = "/usr/local/bin/chromedriver"    #chrome binary location specified here
     options.add_argument("--no-sandbox")
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     options.add_argument("--start-maximized") #open Browser in maximized mode
     driver=webdriver.Chrome(options=options,executable_path=r'/usr/local/bin/chromedriver')
     # driver = webdriver.Chrome(ChromeDriverManager().install(),options=options)
